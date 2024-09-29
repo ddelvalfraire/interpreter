@@ -2,12 +2,16 @@ package main
 
 import (
 	"fmt"
+	"interpreter/repl"
+	"os"
+	"os/user"
 )
 
 func main() {
-	s := "gopher"
-	fmt.Printf("Hello and welcome, %s!\n", s)
-	for i := 1; i <= 5; i++ {
-		fmt.Println("i =", 100/i)
+	user, err := user.Current()
+	if err != nil {
+		panic(err)
 	}
+	fmt.Printf("Hello %s!\n", user.Username)
+	repl.Start(os.Stdin, os.Stdout)
 }
