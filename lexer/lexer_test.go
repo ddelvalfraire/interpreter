@@ -18,7 +18,12 @@ if (5 < 10) {
 return true;
 } else {
 return false;
-}`
+}
+
+"foobar"
+"foo bar"
+
+`
 
 	tests := []struct {
 		expectedType    token.TokenType
@@ -82,6 +87,8 @@ return false;
 		{token.FALSE, "false"},
 		{token.SEMICOLON, ";"},
 		{token.RBRACE, "}"},
+		{token.STRING, "foobar"},
+		{token.STRING, "foo bar"},
 		{token.EOF, ""},
 	}
 
