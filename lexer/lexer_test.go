@@ -23,9 +23,7 @@ return false;
 "foobar"
 "foo bar"
 [1, 2];
-    { "foo": "bar" };
-
-`
+{ "foo": "bar" };`
 
 	tests := []struct {
 		expectedType    token.TokenType
