@@ -18,7 +18,12 @@ if (5 < 10) {
 return true;
 } else {
 return false;
-}`
+}
+
+"foobar"
+"foo bar"
+[1, 2];
+{ "foo": "bar" };`
 
 	tests := []struct {
 		expectedType    token.TokenType
@@ -82,6 +87,20 @@ return false;
 		{token.FALSE, "false"},
 		{token.SEMICOLON, ";"},
 		{token.RBRACE, "}"},
+		{token.STRING, "foobar"},
+		{token.STRING, "foo bar"},
+		{token.LBRACKET, "["},
+		{token.INTEGER, "1"},
+		{token.COMMA, ","},
+		{token.INTEGER, "2"},
+		{token.RBRACKET, "]"},
+		{token.SEMICOLON, ";"},
+		{token.LBRACE, "{"},
+		{token.STRING, "foo"},
+		{token.COLON, ":"},
+		{token.STRING, "bar"},
+		{token.RBRACE, "}"},
+		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}
 

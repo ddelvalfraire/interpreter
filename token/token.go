@@ -9,6 +9,7 @@ const (
 	// Identifiers + literals
 	IDENTIFIER TokenType = "IDENTIFIER"
 	INTEGER    TokenType = "INTEGER"
+	STRING     TokenType = "STRING"
 
 	// Operators
 	ASSIGN   TokenType = "="
@@ -26,11 +27,14 @@ const (
 	// Delimiters
 	COMMA     TokenType = ","
 	SEMICOLON TokenType = ";"
+	COLON     TokenType = ":"
 
-	LPAREN TokenType = "("
-	RPAREN TokenType = ")"
-	LBRACE TokenType = "{"
-	RBRACE TokenType = "}"
+	LPAREN   TokenType = "("
+	RPAREN   TokenType = ")"
+	LBRACE   TokenType = "{"
+	RBRACE   TokenType = "}"
+	LBRACKET TokenType = "["
+	RBRACKET TokenType = "]"
 
 	// Keywords
 	FUNCTION TokenType = "FUNCTION"
