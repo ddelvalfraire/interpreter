@@ -22,6 +22,7 @@ return false;
 
 "foobar"
 "foo bar"
+[1, 2];
 
 `
 
@@ -89,6 +90,12 @@ return false;
 		{token.RBRACE, "}"},
 		{token.STRING, "foobar"},
 		{token.STRING, "foo bar"},
+		{token.LBRACKET, "["},
+		{token.INTEGER, "1"},
+		{token.COMMA, ","},
+		{token.INTEGER, "2"},
+		{token.RBRACKET, "]"},
+		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}
 
