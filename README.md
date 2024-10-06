@@ -4,7 +4,7 @@
 ![Test Coverage](https://img.shields.io/badge/Coverage-72%25-yellowgreen.svg)
 
 ## Description
-This project implements an interpreter for a custom programming language with implicit typing, similar to Python. It features a Read-Eval-Print Loop (REPL) for interactive execution of code.
+This project implements an interpreter for a custom programming language with implicit typing. It features a Read-Eval-Print Loop (REPL) for interactive execution of code.
 
 ## Features
 - REPL (Read-Eval-Print Loop) interface
